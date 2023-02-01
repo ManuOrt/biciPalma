@@ -3,6 +3,4 @@ domain\estacion\Anclajes.class
 domain\estacion\Estacion.class
 domain\bicicleta\Bicicleta.class
 domain\bicicleta\Movil.class
-domain\tarjetaUsuario\Autenticacion.class
 domain\tarjetaUsuario\TargetaUsuario.class
-appalma\BiciPalma.class
