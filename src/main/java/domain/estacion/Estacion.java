@@ -40,7 +40,7 @@ public class Estacion
     public int anclajesLibres(){
         int anclajesLibres = 0;
         for (Anclaje anclaje : anclajes()) {
-            anclajesLibres = anclaje.isOcupado()? anclajesLibres: ++anclajesLibres;
+            anclajesLibres = anclaje.isOcupado()? anclajesLibres : ++anclajesLibres;
         }
         return anclajesLibres;
     }
@@ -69,23 +69,21 @@ public class Estacion
     }
 
     public void retirarBicicleta(Autenticacion tarjetaUsuario) {
-        if (leerTarjetaUsuario(tarjetaUsuario)){
-            boolean isRetirada = false;
+            if (leerTarjetaUsuario(tarjetaUsuario)){
+                boolean isRetirada = false;
 
-            while(!isRetirada){
-                int posicion = anclajes.seleccionarAnclaje();
-                int calcularPosicion = posicion + 1;
-                if (anclajes.isAnclajeOcupado(posicion)){
-                    mostrarBicicleta(anclajes.getBiciAt(posicion), calcularPosicion);
-                    anclajes.liberarAnclaje(posicion);
-                    isRetirada = true;
-                }else{
-
+                while(!isRetirada){
+                    int posicion = anclajes.seleccionarAnclaje();
+                    int calcularPosicion = posicion + 1;
+                    if (anclajes.isAnclajeOcupado(posicion)){
+                        mostrarBicicleta(anclajes.getBiciAt(posicion), calcularPosicion);
+                        anclajes.liberarAnclaje(posicion);
+                        isRetirada = true;
+                    }
                 }
+            } else {
+                System.out.println("Tarjeta de usuario inactiva :(");
             }
-        } else {
-            System.out.println("Tarjeta de usuario inactiva :(");
-        }
     }
 
     private void mostrarBicicleta(Movil bicicleta, int numeroAnclaje){

@@ -41,7 +41,7 @@ public class Anclajes
 
     public int seleccionarAnclaje(){
         Random r = new Random();
-        return r.nextInt(0,anclajes.length-1);
+        return r.nextInt(anclajes.length-1);
     }
 
     @Override

@@ -4,7 +4,7 @@ import domain.bicicleta.Movil;
 
 public class Anclaje
 {
-    private boolean ocupado = false;
+    private boolean ocupado;
     private Movil bici = null;
     //Constructor
     public Anclaje(){}

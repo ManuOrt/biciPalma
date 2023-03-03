@@ -1,4 +1,4 @@
-package targetaUsuario;
+package domain.targetaUsuario;
 
 import domain.tarjetaUsuario.Autenticacion;
 import domain.tarjetaUsuario.TargetaUsuario;
@@ -22,7 +22,7 @@ public class TargetaUsuarioTest
     @Test
     public void toStringTest(){
         TargetaUsuario tarjeta = new TargetaUsuario("2", false);
-        String actual  = tarjeta.toString();
+        String actual = tarjeta.toString();
         Assert.assertEquals("2", actual);
 
     }
